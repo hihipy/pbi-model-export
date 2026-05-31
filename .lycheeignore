@@ -1,0 +1,12 @@
+# Patterns of URLs lychee should skip during link checks.
+# One regex per line. Lines starting with # are ignored.
+
+# Internal UM platform, behind auth. Not reachable from CI.
+^https://insight\.openclinica\.com/
+
+# Repo's own deep links — checking them at push time creates noise
+# when the script files are renamed in the same commit.
+^https://github\.com/hihipy/sql-x-ray/
+
+# Example links in code blocks (the dump's "generated_at" timestamp etc).
+example\.com
