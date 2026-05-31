@@ -12,6 +12,8 @@
 
 A Tabular Editor 2 C# script that exports a complete Power BI model to a structured JSON file built for AI consumption. It includes tables, columns, measures with full recursive DAX dependency chains, relationships with fact/dimension role hints, hierarchies, partitions, RLS roles, a compact summary section with top-level KPI detection, and a **data head** (first N rows sampled directly from source files on disk).
 
+---
+
 ## Why
 
 Power BI models contain structure that's invisible outside of Power BI Desktop. This script extracts everything into a single portable JSON file so you can:
@@ -22,11 +24,15 @@ Power BI models contain structure that's invisible outside of Power BI Desktop. 
 - Audit relationships, RLS roles, and data sources
 - Compare models over time by diffing exports
 
+---
+
 ## Requirements
 
 - **Tabular Editor 2** (tested on 2.27; should work on any 2.x with C# scripting)
 - **Power BI Desktop** model open in Tabular Editor (or SSAS/AAS connection)
 - Source data files accessible on disk (local or OneDrive synced)
+
+---
 
 ## Installation
 
@@ -44,6 +50,8 @@ Power BI models contain structure that's invisible outside of Power BI Desktop. 
 - Name it "Export Full Model to JSON"
 - Now available via right-click context menu on any model
 
+---
+
 ## Configuration
 
 All options are at the top of the script:
@@ -60,6 +68,8 @@ var outputFolder = Path.Combine(
 
 The output file name is generated automatically from the report name, so there's no manual naming. If you have `Sales Performance Dashboard.pbix` open, the file saves as `Sales Performance Dashboard_ModelExport.json`.
 
+---
+
 ## What Gets Exported
 
 | Section | Contents |
@@ -75,6 +85,8 @@ The output file name is generated automatically from the report name, so there's
 | **Data Sources** | Name, description, type |
 | **Summary** | User-facing vs auto-generated table split, top-level KPI list, measures grouped by display folder, relationship map, column inventory per table, measure counts per table |
 | **Data Head** | First N rows sampled from each table's source file: column names and raw cell values |
+
+---
 
 ## Data Head
 
@@ -113,6 +125,8 @@ If the source folder can't be resolved, the `dataHead` entry returns an `error` 
 ```
 
 > **Note on numeric precision:** XLSX stores floating point values at full IEEE 754 precision. Decimal values may appear as scientific notation strings (e.g. `3.9E-1`). Parse as `double` and round downstream as needed.
+
+---
 
 ## Output Format
 
@@ -170,6 +184,8 @@ If the source folder can't be resolved, the `dataHead` entry returns an `error` 
   }
 }
 ```
+
+---
 
 ## Integration Examples
 
@@ -243,6 +259,8 @@ in
     Expanded
 ```
 
+---
+
 ## File Locations
 
 The script automatically saves to your Downloads folder, named after the open report:
@@ -254,6 +272,8 @@ The script automatically saves to your Downloads folder, named after the open re
 | Linux | `/home/{username}/Downloads/{ReportName}_ModelExport.json` |
 
 The output folder is created automatically if it doesn't exist.
+
+---
 
 ## Troubleshooting
 
@@ -283,6 +303,8 @@ Set `includeHiddenObjects = true` in the configuration section.
 
 **File not appearing in Downloads:**
 Check the Tabular Editor output pane for the full path. The script prints the output location on success.
+
+---
 
 ## Technical Details
 
@@ -323,6 +345,8 @@ Each relationship includes `factTable` and `dimensionTable` fields derived from 
 
 UTF-8 without BOM (`new UTF8Encoding(false)`) for maximum compatibility with JSON parsers, Python, and web tools.
 
+---
+
 ## Changelog
 
 ### Current
@@ -358,6 +382,8 @@ UTF-8 without BOM (`new UTF8Encoding(false)`) for maximum compatibility with JSO
 - Measures and calculated columns only
 - Basic string-replace JSON escaping
 - Manual comma tracking
+
+---
 
 ## License
 
