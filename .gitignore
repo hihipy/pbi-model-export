@@ -1,0 +1,246 @@
+# >>> managed gitignore: begin (sync-gitignores.zsh) >>>
+# Edits inside this block are overwritten. Put repo-specific rules outside it.
+
+# --- macOS -------------------------------------------------------------------
+.DS_Store
+._*
+.AppleDouble
+.AppleDB
+.AppleDesktop
+.LSOverride
+# The macOS custom-icon file is named "Icon" plus a carriage return. Git strips
+# one trailing CR from a pattern line, so the pattern needs two. A wildcard
+# form such as "Icon?" also matches any directory named "icons" wherever
+# core.ignorecase is on, which is the default on macOS.
+Icon
+.Spotlight-V100
+.DocumentRevisions-V100
+.TemporaryItems
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+Network Trash Folder
+Temporary Items
+
+# --- Windows and Linux artifacts ---------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*.lnk
+.directory
+.Trash-*
+.nfs*
+
+# --- cloud sync --------------------------------------------------------------
+*.icloud
+.dropbox
+.dropbox.attr
+.dropbox.cache
+# ProtonDrive conflict copies. Uncomment only if no real file in any repo
+# carries "conflict" in its name.
+# *[Cc]onflict*
+
+# --- editors and IDEs --------------------------------------------------------
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+*.ipr
+*.iws
+.fleet/
+.zed/
+.history/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.swn
+*~
+Session.vim
+.netrwhist
+.ionide/
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+develop-eggs/
+eggs/
+.eggs/
+sdist/
+wheels/
+share/python-wheels/
+*.egg-info/
+*.egg
+.installed.cfg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+*.cover
+htmlcov/
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.pdm-python
+.pdm-build/
+__pypackages__/
+venv/
+.venv/
+env/
+ENV/
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# --- R -----------------------------------------------------------------------
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+.Renviron
+.Rprofile.local
+.httr-oauth
+*_cache/
+*.utf8.md
+*.knit.md
+*.Rcheck/
+renv/library/
+renv/local/
+renv/staging/
+renv/python/
+renv/sandbox/
+
+# --- Node and web ------------------------------------------------------------
+node_modules/
+jspm_packages/
+.npm
+.yarn/cache/
+.yarn/install-state.gz
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+.vercel/
+.netlify/
+coverage/
+*.tsbuildinfo
+
+# --- browser extension packaging ---------------------------------------------
+*.crx
+*.xpi
+web-ext-artifacts/
+
+# --- LaTeX -------------------------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# --- Hugo --------------------------------------------------------------------
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# --- Office, Excel, VBA ------------------------------------------------------
+~$*
+*.xlk
+*.~vsd*
+*.laccdb
+*.ldb
+
+# --- secrets and credentials -------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.ppk
+# "*.key" is deliberately absent: Keynote decks are directories named *.key.
+# Add it per repo where no Keynote file exists.
+secrets.json
+credentials.json
+service-account*.json
+.secrets/
+*.tfvars
+.terraform/
+
+# --- local databases and dumps -----------------------------------------------
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+*.dump
+
+# --- build noise and scratch -------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.pid
+.tmp/
+.scratch/
+# <<< managed gitignore: end <<<
+
+# --- local rules: edit freely, never overwritten -----------------------------
