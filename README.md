@@ -6,9 +6,9 @@
 **Built with**
 
 [![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
-[![Tabular Editor 2](https://img.shields.io/badge/Tabular%20Editor%202-217346?style=flat&logoColor=white)](https://tabulareditor.com)
-[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)](https://www.microsoft.com/power-platform/products/power-bi/)
 [![DAX](https://img.shields.io/badge/DAX-F2C811?style=flat&logoColor=black)](https://learn.microsoft.com/en-us/dax/)
+[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)](https://www.microsoft.com/power-platform/products/power-bi/)
+[![Tabular Editor 2](https://img.shields.io/badge/Tabular%20Editor%202-217346?style=flat&logoColor=white)](https://tabulareditor.com)
 
 A Tabular Editor 2 C# script that exports a complete Power BI model to a structured JSON file built for AI consumption. It includes tables, columns, measures with full recursive DAX dependency chains, relationships with fact/dimension role hints, hierarchies, partitions, RLS roles, a compact summary section with top-level KPI detection, and a **data head** (first N rows sampled directly from source files on disk).
 
